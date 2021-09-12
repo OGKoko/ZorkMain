@@ -10,7 +10,7 @@ void TypeCharacter::operator<<(string s) {
 
 	for (int i = 0; i < s.size(); i++) {
 		cout << s.at(i);
-		if (s.at(i) != ' ' && s.at(i) != '\n') Beep(10, 5);
+		if (s.at(i) != ' ' && s.at(i) != '\n') Beep(15, 5);
 		Sleep(this->miliseconds);
 	}
 }

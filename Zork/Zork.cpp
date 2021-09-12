@@ -12,7 +12,7 @@ int main()
 {
 	string space = "--------------------------------------------------------------------\n";
 	string welcomeMsg = "Hi, Welcome to Zork! \nRemember, you can always type <h> or <Help> to see the commands available \nHave fun! ^^ \n";
-	TypeCharacter type(0.2);
+	TypeCharacter type(0.5);
 	Player p(3);
 	char pInput;
 
@@ -90,6 +90,7 @@ int main()
 				else if (itemsAux.getId() == VAULT && p.inventoryItem(VAULT_KEY).getId() != -1) {
 					ItemsContenedor i = map.getActiveRoom()->desiredItem(VAULT);
 					p.addItems(i.getContedido());
+					p.dropItems(VAULT_KEY);
 					type << "Item Key added\n";
 				}
 				else {
