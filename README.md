@@ -3,11 +3,11 @@ ZorgLikeGame
 Created by: Enrique Imbert-Bouchard Nadal [e-imbert@hotmail.com]
 
 commands to play Zork below:
-<N> to go North			<L> to list the items
-<S> to go South			<G> to take the items
-<W> to go West 			<I> to list the Inventory
-<E> to go East 			<D> to Drop any item from the Inventory
-<H> to get commands list ingame
+(N) to go North			(L) to list the items
+(S) to go South			(G) to take the items
+(W) to go West 			(I) to list the Inventory
+(E) to go East 			(D) to Drop any item from the Inventory
+(H) to get commands list ingame
 
 you can write the full name of the inputs and can be uppercase or lowercase, 
 whatever you feel more comfortable with.
