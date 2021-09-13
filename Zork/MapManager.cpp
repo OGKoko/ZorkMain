@@ -29,14 +29,16 @@ MapManager::MapManager(vector<Room*> r)
 
 	r[0]->addItem(ItemsContenedor("Bandage ", "[ Heal yourself with it ]", BANDAGE));
 	r[0]->addItem(ItemsContenedor("Bunch of leaves ", "[ Just a bunch of leaves ]", LEAVES));
+	r[0]->addItem(ItemsContenedor("Nails ", "[ A small box with rusty nails on it ]", NAIL));
 
-	r[1]->addItem(ItemsContenedor("Nails ", "[ A small box with rusty nails on it ]", NAIL));
+	r[1]->addItem(ItemsContenedor("Nails ", "[A small box with rusty nails on it ]", NAIL));
 	r[1]->addItem(ItemsContenedor("Bandage ", "[ Heal yourself with it ]", BANDAGE));
 
-	r[3]->addItem(ItemsContenedor("Key ", "[ Something could be opened with it ]", VAULT_KEY));
+	r[2]->addItem(ItemsContenedor("Nails ", "[ A small box with rusty nails on it ]", NAIL));
+	r[2]->addItem(ItemsContenedor("Key ", "[ Something could be opened with it ]", VAULT_KEY));
+	
 	r[3]->addItem(ItemsContenedor("Wood Plank ", "[ Could be usefull to catch fire, unlucky i don't have a lighter ]", LEAVES));
-
-	r[3]->addItem(ItemsContenedor("Vault", "[ descricion del vault ]", VAULT, Items("Key", "[ Key to open the doors ]", DOOR_KEY)));
+	r[3]->addItem(ItemsContenedor("Vault", "[ Will this vault contain a treasure? ]", VAULT, Items("Magestic Key", "[ Key from a big fancy door ]", DOOR_KEY)));
 
 	rooms = r;
 }
