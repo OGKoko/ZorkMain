@@ -4,7 +4,9 @@ class Player
 {
 	int hp;
 	vector<Items> playerItems;
+
 public:
+
 	Player(int);
 	string listItems();
 	void addItems(Items);

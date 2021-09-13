@@ -4,7 +4,9 @@
 
 Player::Player(int pv) {
 	this->hp = pv;
+
 }
+
 
 
 string Player::listItems()

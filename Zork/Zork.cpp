@@ -15,6 +15,7 @@ int main()
 	TypeCharacter type(0.5);
 	Player p(3);
 	char pInput;
+	
 
 	type << space;
 	type << welcomeMsg;
@@ -31,9 +32,9 @@ int main()
 	map.setActiveRoom(mm.getFirstRoom());
 
 	type << map.getNameRoom();
-
+	
 	Items itemsAux;
-	//cout << pInput;
+
 	while (!map.getActiveRoom()->getIsGG()) {
 		cin >> pInput;
 		pInput = tolower(pInput);
@@ -91,11 +92,12 @@ int main()
 					ItemsContenedor i = map.getActiveRoom()->desiredItem(VAULT);
 					p.addItems(i.getContedido());
 					p.dropItems(VAULT_KEY);
-					type << "Item Key added\n";
+					type << "Magestic Key added to the inventory\n";
 				}
 				else {
+				
 					p.addItems(itemsAux);
-					type << "Item added \n";
+					type << "Item has been added to the inventory\n";
 				}
 			}
 			else {
@@ -121,20 +123,22 @@ int main()
 				p.dropItems(itemDrop);
 			}
 			else if (p.dropItems(itemDrop))
-				type << "item has been dropped\n";
+				type << "Item has been dropped\n";
 			else
 				type << "404 item not found :(\n";
 			break;
 
 		case 'h':
 			type << "type below what action you want to perform: \n";
-			type << "<N> to go North			<L> to list the items \n";
+			type << "<N> to go North			<L> to look for items \n";
 			type << "<S> to go South			<G> to take the items \n";
 			type << "<W> to go West 			<I> to list the Inventory \n";
 			type << "<E> to go East 			<D> to Drop any item from the Inventory \n";
 			break;
+
+
 		default:
-			type << "I'm sorry, wrong input, \nyou must be confused... \nPress <H> or type <Help> if you don't remember how to play\n";
+			type << "I'm sorry, wrong input, \nYou must be confused... \nPress <H> or type <Help> if you don't remember how to play\n";
 		}
 	}
 }
